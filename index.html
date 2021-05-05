@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title>Cool Man</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img class="logo">
+            <ul>
+                <li><a href="#">HAVE</a></li>
+                <li><a href="#">A</a></li>
+                <li><a href="#">GOOD</a></li>
+                <li><a href="#">DAY</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left-col">
+                <h1>OMAE<br>WA MOU<br>SHINDEIRU</h1>
+            </div>
+            <div class="right-col">
+                <p>Click Play To Listen, Then Go Down</p>
+                <img src="media/play.png" id="icon">
+            </div>
+        </div>
+        <div  class="thankyou"> 
+            <p>THANK YOU</p>
+        </div>
+    </div>
+    
+    <audio id="mysong">
+        <source src="media/mysong.mp3" type="audio/mp3">
+    </audio>
+    
+    <video id="duet" class="vid">
+        <source src="media/Omae%20Wa%20Mou.mp4" type="video/mp4">
+    </video>
+    
+<script>
+    var mysong = document.getElementById("mysong");
+    var icon = document.getElementById("icon");
+    var duet = document.getElementById("duet");
+    
+    icon.onclick = function(){
+        if(duet.paused){
+           duet.play();
+            icon.src = "media/pause.png";
+        }
+        else{
+            duet.pause();
+            icon.src = "media/play.png";
+        }
+    }
+        
+</script>
+    
+</body>
+
+</html>
